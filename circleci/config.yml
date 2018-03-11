@@ -6,14 +6,18 @@ jobs:
      - image: docker:17.05.0-ce-git
     steps:
       - setup_remote_docker
-      - run: echo "${search_server_url}"
+      - run:
+          name: Show environment variable
+          command: echo "${search_server_url}"
   deploy:
     working_directory: ~/repo
     docker:
      - image: docker:17.05.0-ce-git
     steps:
       - setup_remote_docker
-      - run: echo "${search_server_url}"
+      - run:
+          name: Show environment variable
+          command: echo "${search_server_url}"
 workflows:
   version: 2
   build_and_test:
