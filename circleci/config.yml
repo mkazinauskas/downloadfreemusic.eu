@@ -1,5 +1,12 @@
 version: 2
 jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+     - image: docker:17.05.0-ce-git
+    steps:
+      - setup_remote_docker
+      - run: echo "${search_server_url}"
   deploy:
     working_directory: ~/repo
     docker:
@@ -12,6 +19,8 @@ workflows:
   build_and_test:
     jobs:
       - deploy
+          requires:
+            - build
           filters:
             branches:
               only: master
