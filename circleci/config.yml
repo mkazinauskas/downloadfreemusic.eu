@@ -1,14 +1,12 @@
 version: 2
 jobs:
   build:
-    context: production
     working_directory: ~/repo
     docker:
      - image: docker:17.05.0-ce-git
     steps:
-      - checkout
       - setup_remote_docker
-      - run: echo "${search-server-url}"
+      - run: echo "${search_server_url}"
 workflows:
   version: 2
   build_and_test:
