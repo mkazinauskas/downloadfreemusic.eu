@@ -37,12 +37,12 @@ if (empty($search) || $result_count == 0) {
         <div class="pagination"><?php
             if ($page > 1) { ?>
                 <a class="btn btn-primary mr-1" role="button"
-                   href="<?php echo WEB_PATH; ?>search/<?php echo "$type"; ?>/<?php echo "$ppage"; ?>/<?php echo seoit($search); ?>.html">Previous</a>
+                   href="/search/<?php echo "$type"; ?>/<?php echo "$ppage"; ?>/<?php echo seoit($search); ?>.html">Previous</a>
                 <?php
             }
             if ($npage <= $settings['max_pages'] && $result_count == $settings['nebula_results']) { ?>
                 <a class="btn btn-primary" role="button"
-                   href="<?php echo WEB_PATH; ?>search/<?php echo $type; ?>/<?php echo $npage; ?>/<?php echo seoit($search); ?>.html">More
+                   href="/search/<?php echo $type; ?>/<?php echo $npage; ?>/<?php echo seoit($search); ?>.html">More
                     "<?php
                     if (isset($ssearch)) {
                         echo $ssearch;
