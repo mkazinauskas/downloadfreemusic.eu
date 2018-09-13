@@ -11,7 +11,7 @@
     </p>
     <hr/>
     <div class="site-info col-sm-12">
-        <p class="text-muted"> Copyright © 2017 <?php echo $settings['user_visible_name']; ?>
+        <p class="text-muted"> Copyright © <?php echo date("Y"); ?> <?php echo $settings['user_visible_name']; ?>
             <a href="<?php echo $settings['contact_us_url']; ?>" target="_blank"
                class="float-right ml-1 badge badge-light">Contact us!</a>
             <a href="/sitemap.htm" target="_blank" class="float-right ml-1 badge badge-light">Sitemap</a>
