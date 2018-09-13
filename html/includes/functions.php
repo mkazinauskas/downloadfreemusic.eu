@@ -53,7 +53,7 @@ function api_results($limit, $url)
             $searched_query_for_seo = seoit($searched_query);
             $search_query_visible = preg_replace("/[^a-zA-Z0-9\s]/", " ", $searched_query);
             if (!empty($searched_query)) {
-                echo '<a class="badge badge-light" href="' . WEB_PATH . 'search/mp3/1/' . $searched_query_for_seo . '.html" title="' . $search_query_visible . ' free mp3 download">' . $search_query_visible . '</a> ';
+                echo '<a class="badge badge-light" href="/search/mp3/1/' . $searched_query_for_seo . '.html" title="' . $search_query_visible . ' free mp3 download">' . $search_query_visible . '</a> ';
             }
         }
     }

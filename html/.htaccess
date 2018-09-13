@@ -7,10 +7,6 @@ Deny from all
 
 RewriteEngine on
 
-#RewriteCond %{REQUEST_SCHEME} http [OR]
-#RewriteCond %{HTTP_HOST} ^www\.
-#RewriteRule ^ http://downloadfreemusic.eu%{REQUEST_URI} [NE,L,R]
-
 RewriteRule ^search/(.*)/(.*)/(.*).html?$ search.php?search=$3&page=$2&type=$1 [L]
 RewriteRule ^page_is_banned/(.*).html?$ banned_page.php?search=$1 [L]
 
